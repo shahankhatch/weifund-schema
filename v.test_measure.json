@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "test_measure",
+  "type": "object",
+  "properties": {
+    "test_type": { "type": "string" }, 
+    "specification": { "$ref": "specification" },
+    "test_results": { "$ref": "test_results" },
+    "score": { "type": "string" },
+    "ceiling": { "type": "string" },
+    "weight": { "type": "string" }
+  },
+  "required": [
+    "test_type",
+    "specification", 
+    "test_results", 
+    "score", 
+    "ceiling", 
+    "weight"]
+}
+

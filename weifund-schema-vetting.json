@@ -1,0 +1,111 @@
+/****************************************************************************************************
+
+WeiFund Vetting Specification
+
+Authors:
+Bill Gleim
+
+This schema defines the vetting specification for WeiFund that allows describing
+attestations of vetting processes for WeiFund-compliant campaigns. 
+
+Specifically, the schema allows describing campaigns, their vetting specifications and test measures, 
+with support for scored test results.
+
+Root: assessment descriptor
+Specification: vetting specification descriptor
+TestMeasureTypes: list of test measures
+MeasureType: specification of a vetting measure
+Result: specification of a measure's scored test result
+
+Tasks:
+
+TBD
+
+*****************************************************************************************************/
+
+
+let schemaRoot = {
+  id: 'root',
+  type: 'object', 
+  properties: {
+    submitter_name: { type: 'string' },
+    SCS_name: { type: 'string' },
+    repository: { type: 'string' },
+    commit_hash: { type: 'string' },
+    readiness_score: { type: 'string' },
+    test_measures: { $ref: 'test_measures' },
+  },
+  required: [ 
+    'submitter_name',
+    'SCS_name',
+    'repository',
+    'readiness_score'
+  ]
+};
+
+let schemaSpecification = {
+  id: 'specification',
+  type: 'object',
+  properties: {
+    URL: { type: 'string' },
+    version: { type: 'string' },
+    auth: { type: 'string' } /* (optional) e.g., public | permissioned */
+  },
+  required: [ 'URL', 'version' ]
+};
+
+
+let schemaTestMeasureTypes = {
+  id: 'test_measures',
+  type: 'object',
+  items: { $ref: 'test_measure' },
+  required: []
+};
+
+let schemaTestMeasure = {
+  id: 'test_measure',
+  type: 'object',
+  properties: {
+    'test_type': { type: 'string' }, /* e.g., user_stories, edge_cases, code_review, static_analysis, runtime_analysis, external_audit, phased_rollout, bug_bounty */
+    'specification': { $ref: 'specification' },
+    'test_results': { $ref: 'test_results' },
+    'score': { type: 'string' },
+    'ceiling': { type: 'string' },
+    'weight': { type: 'string' }
+  },
+  required: [
+    'test_type',
+    'specification', 
+    'test_results', 
+    'score', 
+    'ceiling', 
+    'weight']
+};
+
+let schemaResults = {
+  id: 'test_results',
+  type: 'array',
+  items: { $ref: 'specification' },
+  required: []
+};
+
+/*
+-- type template
+let schemaRoot = {
+  id: 'root',
+  type: 'object', 
+  properties: {
+  },
+  required: []
+};
+*/
+
+
+/*
+{ test_result: { 
+    view: public
+    url: http://
+    version: 1.0
+  }
+}
+*/

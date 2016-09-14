@@ -1,0 +1,6 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "test_measures",
+  "type": "array",
+  "items": { "$ref": "test_measure" }
+}

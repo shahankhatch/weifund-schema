@@ -1,0 +1,11 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "specification",
+  "type": "object",
+  "properties": {
+    "URL": { "type": "string" },
+    "version": { "type": "string" },
+    "auth": { "type": "string" }
+  },
+  "required": [ "URL", "version" ]
+}

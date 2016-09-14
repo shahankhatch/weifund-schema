@@ -12,7 +12,9 @@
 	    "type": "string"
 	},
 	"address": {
-	    "type": "string"
+	    "type": "string",
+	    "maxLength": 42,
+	    "mixLength": 40
 	},
 	"compiler": {
 	    "type": "string"
@@ -31,6 +33,7 @@
 	},
 	"abi": {
 	    "type": "array",
+	    "minItems" : 0,
 	    "items": {
 		"type": "object",
 		"properties": {
@@ -109,15 +112,6 @@
 			},
 			"about": {
 			    "type": "string"
-			},
-			"contributionDisclaimer": {
-			    "type": "string"
-			},
-			"payoutDisclaimer": {
-			    "type": "string"
-			},
-			"refundDisclaimer": {
-			    "type": "string"
 			}
 		    },
 		    "required": [
@@ -125,10 +119,7 @@
 			"alternateName",
 			"description",
 			"disambiguatedDescription",
-			"about",
-			"contributionDisclaimer",
-			"payoutDisclaimer",
-			"refundDisclaimer"
+			"about"
 		    ]
 		}
 	    },

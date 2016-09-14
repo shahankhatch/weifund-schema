@@ -2,17 +2,26 @@
   "name": "weifundschemavalidator",
   "version": "1.0.0",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weifund/weifund-schema"
+  },
   "main": "index.js",
   "scripts": {
-      "test": "mocha ./tests/package-test.js",
-      "jshint": "jshint ./*.js ./tests/*.js" 
+    "test:wf:campaign": "mocha ./tests/test.weifund.campaign.js",
+    "test:wf:vetting": "mocha ./tests/test.weifund.vetting.js",
+    "jshint": "jshint ./*.js ./tests/*.js",
+    "jshint:rec": "find . -type f \\( -name '*.json' -o -name '*.js' \\) -a ! -path './node_modules/*'  -exec jshint {} \\;"
   },
   "author": "Shahan Khatchadourian <shahan.k.code@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "ajv": "^4.5.0"
+    "ajv": "^4.5.0",
+    "bignumber.js": "^2.4.0",
+    "jsonpath": "^0.2.6"
   },
   "devDependencies": {
+    "generate-schema": "^2.1.1",
     "jshint": "^2.9.3",
     "mocha": "^3.0.2"
   }

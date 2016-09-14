@@ -1,0 +1,22 @@
+{
+  "SCS_name": "What is this?",
+  "repository": "weifund-contracts",
+  "commit_hash": "What is this for? How is it different from URL+version pair?",
+  "readiness_score": "80",
+  "test_measures": [
+    { "test_type": "runtime analysis",
+      "specification" : { 
+	"URL": "weifund-contracts/tests", 
+	"version": "1.0"
+      },
+      "test_results" : [{
+        "auth": "public",
+        "URL": "specific test url",
+        "version": "1.1"}],
+      "score": "80",
+      "ceiling": "100",
+      "weight": "100"
+    }
+  ]
+}
+   
