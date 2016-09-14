@@ -1,8 +1,13 @@
 'use strict';
 
+const util = require('util');
+
 // schema validation library
 const Ajv = require('ajv');
 const ajv = new Ajv(); // options can be passed, e.g. {allErrors: true}
+
+// schema generation library
+const generateSchema = require('generate-schema');
 
 // adding support for type searches
 const jp = require('jsonpath');
@@ -15,6 +20,9 @@ const BigNumber = require('bignumber.js');
 // campaign specification schema
 const schemaCampaign = require('./weifund-schema.json');
 
+const inspect = function(o) {
+  console.log(util.inspect(o,{'depth':null}));
+};
 
 /* Type validators */
 
@@ -77,6 +85,15 @@ const validateCampaignInstance = function(dataInput) {
     return { 'result': validate(dataInput), 'errors': validate.errors , 'bignumber' : bnresult };
 };
 
+const compileSchema = function(schema) {
+    return ajv.compile(schema);
+};
+
+// TODO extract a schema from an instance sample
+const generateSchemaHelper = function(sampleInput) {
+    return generateSchema.json(sampleInput);
+};
+
 // currently exports weifund validators
 // TODO extend with other campaign validators
 module.exports = {
@@ -84,5 +101,8 @@ module.exports = {
     'campaign': schemaCampaign
   },
   'validateCampaignInstance': validateCampaignInstance,
-  'validateVettingInstance': validateVettingInstance
+  'validateVettingInstance': validateVettingInstance,
+  'generateSchema': generateSchemaHelper,
+  'compileSchema': compileSchema,
+  'inspect': inspect
 };

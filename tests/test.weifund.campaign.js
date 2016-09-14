@@ -26,8 +26,6 @@ const exp3 = {}; // expect no errors
 
 // the .message property is cleared from validation due to parsing of quotes in the message
 
-console.log('validate');
-console.log(validate);
 
 function validateDataOnSchema(data, expected) {
     var valid = validate.validateCampaignInstance(data);
@@ -55,5 +53,15 @@ describe('schema tests', function() {
     });
     it('should validate the bignumber entry without error', function() {
 	validateDataOnSchema(data3,exp3);
+    });
+    it('should generate a schema from a sample instance and validate the instance against the new schema', function() {
+	// generate a schema from the sample input
+        const generatedSchema = validate.generateSchema(data);
+	// compile the schema so that we can validate against it
+        const compiledSchema = validate.compileSchema(generatedSchema);
+	// validate the original instance against the generated schema
+        const validationResult = compiledSchema(data);
+	// assert that the instance validated successfully 
+	assert.ok(validationResult, 'auto-generated schema did not validate against original sample');
     });
 });
