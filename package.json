@@ -11,7 +11,8 @@
     "test:wf:campaign": "mocha ./tests/test.weifund.campaign.js",
     "test:wf:vetting": "mocha ./tests/test.weifund.vetting.js",
     "jshint": "jshint ./*.js ./tests/*.js",
-    "jshint:rec": "find . -type f \\( -name '*.json' -o -name '*.js' \\) -a ! -path './node_modules/*'  -exec jshint {} \\;"
+    "jshint:rec": "find . -type f \\( -name '*.json' -o -name '*.js' \\) -a ! -path './node_modules/*'  -exec jshint {} \\;",
+    "generate:schema:campaign": "node ./generateSchema.js"
   },
   "author": "Shahan Khatchadourian <shahan.k.code@gmail.com>",
   "license": "ISC",

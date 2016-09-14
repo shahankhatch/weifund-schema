@@ -1,6 +1,7 @@
 'use strict';
 
 const util = require('util');
+const fs = require('fs');
 
 // schema validation library
 const Ajv = require('ajv');
@@ -94,6 +95,22 @@ const generateSchemaHelper = function(sampleInput) {
     return generateSchema.json(sampleInput);
 };
 
+const writeSchemaFromInstance = function(sampleInput, outpath) {
+    const schema = generateSchemaHelper(sampleInput);
+
+    // build string build object
+    const stringBuildObject = JSON.stringify(schema, null, 2);
+
+    // build environments fileory
+    fs.writeFile(outpath, stringBuildObject, 'utf8', function(writeBuildFileError, writeBuildFileResult) {
+
+      // exits with success
+      if(!writeBuildFileError && typeof writeBuildFileResult === 'undefined') {
+        process.exit();
+      }
+    });
+};
+
 // currently exports weifund validators
 // TODO extend with other campaign validators
 module.exports = {
@@ -104,5 +121,6 @@ module.exports = {
   'validateVettingInstance': validateVettingInstance,
   'generateSchema': generateSchemaHelper,
   'compileSchema': compileSchema,
-  'inspect': inspect
+  'inspect': inspect,
+  'writeSchemaFromInstance': writeSchemaFromInstance
 };
