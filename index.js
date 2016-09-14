@@ -33,8 +33,8 @@ const validateVettingInstance = function(dataInput) {
     // compile the vetting schema
     try {
       // instantiate a new instance of Ajv solely for the vetting specification
-      const ajv1 = Ajv({
-	  "allErrors": false
+      const ajv1 = new Ajv({
+	  'allErrors': false
       });
 
       // add all vetting schema elements to a new Ajv instance
