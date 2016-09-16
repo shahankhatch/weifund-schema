@@ -1,13 +1,26 @@
 {
-  "submitter_name": "Shahan",
-  "SCS_name": "What is this?",
+  "submitter_name": "Weifund",
+  "SCS_name": "Weifund Standard Campaign",
   "repository": "git+https://github.com/shahankhatch/weifund-contracts",
   "commit_hash": "https://github.com/shahankhatch/weifund-contracts/commit/ca7ba55e93b8a30bd7621038ed2bc860394ad116",
   "readiness_score": "80",
   "test_measures": [
+    { "test_type": "user stories",
+      "specification" : { 
+	"URL": "https://docs.google.com/a/consensys.net/spreadsheets/d/1ReFydfda9SxyyV_DC3aa6ti1FaisTcPdPKb9F4PpfHk/edit?usp=drivesdk#gid=0", 
+	"version": "1.0"
+      },
+      "test_results" : [{
+        "auth": "public",
+        "URL": "https://docs.google.com/a/consensys.net/spreadsheets/d/1ReFydfda9SxyyV_DC3aa6ti1FaisTcPdPKb9F4PpfHk/edit?usp=drivesdk#gid=0",
+        "version": "1.1"}],
+      "score": "80",
+      "ceiling": "100",
+      "weight": "30"
+    },
     { "test_type": "runtime analysis",
       "specification" : { 
-	"URL": "https://github.com/shahankhatch/weifund-contracts/blob/b9bb8d4d20718392d8721a3565d194583c6aa921/contracts/__tests__/test.StandardCampaign.js", 
+	"URL": "https://github.com/shahankhatch/weifund-contracts/blob/b9bb8d4d20718392d8721a3565d194583c6aa921/contracts/__tests__/", 
 	"version": "1.0"
       },
       "test_results" : [{
@@ -46,6 +59,20 @@
       "weight": "30"
     },
       { "test_type": "bug bounty program",
+      "specification" : { 
+	"auth": "private",
+	"URL": "TODO", 
+	"version": "1.0"
+      },
+      "test_results" : [{
+        "auth": "public",
+        "URL": "TODO",
+        "version": "1.1"}],
+      "score": "40",
+      "ceiling": "100",
+      "weight": "20"
+    }, 
+      { "test_type": "key management",
       "specification" : { 
 	"auth": "private",
 	"URL": "TODO", 
