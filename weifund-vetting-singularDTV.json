@@ -1,0 +1,93 @@
+{
+  "submitter_name": "Shahan",
+  "SCS_name": "SingularDTV Contracts",
+  "repository": "git+https://github.com/ConsenSys/singulardtv-contracts",
+  "commit_hash": "https://github.com/shahankhatch/weifund-contracts/commit/ca7ba55e93b8a30bd7621038ed2bc860394ad116",
+  "readiness_score": "80",
+  "test_measures": [
+    { "test_type": "runtime analysis",
+      "specification" : { 
+	"URL": "https://github.com/ConsenSys/singulardtv-contracts/tree/master/tests", 
+	"version": "1.0"
+      },
+      "test_results" : [{
+        "auth": "public",
+        "URL": "TODO",
+        "version": "1.1"}],
+      "score": "80",
+      "ceiling": "100",
+      "weight": "30"
+    },
+      { "test_type": "static analysis",
+      "specification" : { 
+	"URL": "TODO", 
+	"version": "1.0"
+      },
+      "test_results" : [{
+        "auth": "public",
+        "URL": "TODO",
+        "version": "1.1"}],
+      "score": "100",
+      "ceiling": "100",
+      "weight": "20"
+    },
+      { "test_type": "readiness assessment based on Weifund Security Document - internal code review conducted",
+      "specification" : { 
+	"auth": "private",
+	"URL": "TODO", 
+	"version": "1.0"
+      },
+      "test_results" : [{
+        "auth": "public",
+        "URL": "no serious issues reported",
+        "version": "1.1"}],
+      "score": "100",
+      "ceiling": "100",
+      "weight": "30"
+    },
+      { "test_type": "bug bounty program",
+      "specification" : { 
+	"auth": "private",
+	"URL": "https://docs.google.com/document/d/18He5FdDxJNTEBJ1ycLRPxoDdOWEn-77f-KQWfBTmT7c", 
+	"version": "1.0"
+      },
+      "test_results" : [{
+        "auth": "public",
+        "URL": "TODO",
+        "version": "1.1"}],
+      "score": "40",
+      "ceiling": "100",
+      "weight": "20"
+    },
+      { "test_type": "key management",
+      "specification" : { 
+	"auth": "private",
+	"URL": "https://docs.google.com/document/d/1ySAFdw50BNGX4rcKSy8tVELfM84HIJl45UlDXl77vHI/edit", 
+	"version": "1.0"
+      },
+      "test_results" : [{
+        "auth": "public",
+        "URL": "TODO",
+        "version": "1.1"}],
+      "score": "40",
+      "ceiling": "100",
+      "weight": "20"
+    },
+      { "test_type": "phased rollout plan",
+      "specification" : { 
+	"auth": "private",
+	"URL": "https://docs.google.com/document/d/18He5FdDxJNTEBJ1ycLRPxoDdOWEn-77f-KQWfBTmT7c", 
+	"version": "1.0"
+      },
+      "test_results" : [{
+        "auth": "public",
+        "URL": "TODO",
+        "version": "1.1"}],
+      "score": "40",
+      "ceiling": "100",
+      "weight": "20"
+    }
+
+  ]
+}
+   

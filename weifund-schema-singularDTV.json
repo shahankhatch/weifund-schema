@@ -1,0 +1,50 @@
+{
+  "campaignSchema": {
+    "@context": "https://singulardtv.com",
+    "@type": "CampaignContract",
+    "version": "0.1.0",
+    "address": "",
+    "compiler": "",
+    "compilerFlags": "",
+    "compilerVersion": "",
+    "transactionHash": "",
+    "bytecode": "",
+    "source": "git+https://github.com/ConsenSys/singulardtv-contracts",
+    "abi": [],
+    "url": "https://singulardtv.com",
+    "location": {
+      "address": {
+        "addressCountry": "United States",
+        "addressLocality": "",
+        "addressRegion": "",
+        "postalCode": "10001",
+        "streetAddress": "220 5th Ave., PHW New York, NY"
+      }
+    },
+    "fallback": false,
+    "category": "",
+    "image": "https://media.licdn.com/media/AAEAAQAAAAAAAAlWAAAAJGVlNTZkMTg2LTNmNmMtNDNiOC05YzIwLWQ5MDVjYTkxMmY4Nw.png",
+    "mainEntity": "",
+    "i18n": {
+      "en": {
+        "name": "",
+        "alternateName": "",
+        "description": "",
+        "disambiguatedDescription": "",
+        "about": "",
+        "abi": [
+          {
+            "name": "",
+            "alternateName": "",
+            "description": "",
+            "disambiguatedDescription": "",
+            "placeHolder": "",
+            "defaultValue": "",
+            "unitName": ""
+          }
+        ]
+      }
+    },
+    "relatedContracts": []
+  }
+}
