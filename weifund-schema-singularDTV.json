@@ -1,9 +1,15 @@
 {
   "campaignSchema": {
     "@context": "https://singulardtv.com",
-    "@type": "CampaignContract",
+    "@type": "CampaignContractact",
     "version": "0.1.0",
-    "address": "",
+    "contracttype": "SingularDTVWeifund",
+    "address": "0x8bd71f8229aed667361d71ac1782055d3c22c48a",
+    "otheraddresses": [
+       {"contracttype":"SingularDTVFund", "address": "0x0497f3c3bca81d990927dc7ee29c9bc4ec4ad9fe"},
+       {"contracttype":"SingularDTVCrowdfunding", "address": "0x451d065165626ce397f0d986801b49c97fe62790"},
+       {"contracttype":"SingularDTVToken", "address": "0x94947d588988ca1ecb04665c0e3830198ae22541"}
+    ],
     "compiler": "",
     "compilerFlags": "",
     "compilerVersion": "",
