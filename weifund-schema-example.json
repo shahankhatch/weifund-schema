@@ -329,7 +329,7 @@
     "forms": [{
       "@context": "http://weifund.io",
       "@type": "subscribe",
-      "action": "//weifund.us10.list-manage.com/subscribe/post?u=5fd10dccde0a9e8f200ae4e44&amp;id=6c94b8c26f",
+      "action": "https://weifund.us10.list-manage.com/subscribe/post?u=5fd10dccde0a9e8f200ae4e44&amp;id=6c94b8c26f",
       "fields": {
         "email": 1
       }

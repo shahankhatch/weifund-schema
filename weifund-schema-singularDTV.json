@@ -45,6 +45,16 @@
         ]
       }
     },
+  "mailChimp": {
+    "forms": [{
+      "@context": "http://singulardrv.com",
+      "@type": "subscribe",
+      "action": "https://singulardtv.us13.list-manage.com/subscribe/post-json?u=2552e07414c84a76822faa45a&id=c647af5a8d",
+      "fields": {
+        "email": 1
+      }
+    }]
+  },
     "relatedContracts": []
   }
 }
