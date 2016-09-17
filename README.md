@@ -2,4 +2,4 @@
 A repository for all WeiFund related data schemas
 
 ## Licence
-MIT
+To be determined.
