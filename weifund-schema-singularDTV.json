@@ -1,7 +1,7 @@
 {
   "campaignSchema": {
     "@context": "https://singulardtv.com",
-    "@type": "CampaignContractact",
+    "@type": "CampaignContract",
     "version": "0.1.0",
     "contracttype": "SingularDTVWeifund",
     "address": "0x8bd71f8229aed667361d71ac1782055d3c22c48a",
@@ -30,7 +30,8 @@
     "fallback": false,
     "category": "",
     "image": "https://media.licdn.com/media/AAEAAQAAAAAAAAlWAAAAJGVlNTZkMTg2LTNmNmMtNDNiOC05YzIwLWQ5MDVjYTkxMmY4Nw.png",
-    "mainEntity": "https://www.youtube.com/channel/UCPPqoOyRHO0yGYhKZmn1T1A",
+    "mainEntity": "https://www.youtube.com/watch?v=gMbWTVkHZ7Y",
+    "mainEntity2": "https://www.youtube.com/channel/UCPPqoOyRHO0yGYhKZmn1T1A",
     "i18n": {
       "en": {
         "name": "",
